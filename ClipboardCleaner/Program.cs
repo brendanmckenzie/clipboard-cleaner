@@ -50,6 +50,7 @@ namespace ClipboardCleaner
                             var queryStringChanged = false;
                             foreach (string key in queryString.Keys)
                             {
+                                if (key == null) { continue; }
                                 if (key.StartsWith("utm"))
                                 {
                                     queryStringChanged = true;
